@@ -1,0 +1,205 @@
+:root {
+    --color-dark-100: 7, 19, 41;
+}
+
+.panel {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(var(--color-dark-100));
+    border-radius: .5rem;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    padding: 6px;
+}
+
+.FiltersPanel 
+{
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+}
+
+.section {
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.ModesBackground 
+{
+    background-color: rgb(var(--color-light-background));
+    height: 100%;
+    border-radius: 6px;
+
+    flex-direction: row;
+    display: flex;
+    gap: 8px;
+    padding: 7px;
+}
+
+.ModeButton {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  font-size: 14.4px;
+  border-radius: 4px;
+
+  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+  will-change: background-color, color, box-shadow, transform;
+  cursor: pointer;
+}
+
+.ModeButton:hover {
+  background-color: rgba(var(--btn-color), .08);
+}
+
+.ModeButton[data-active="true"] {
+  background-color: rgba(var(--btn-color), .12);
+  color: rgb(var(--btn-color));
+}
+
+.newBattleButton {
+    height: 100%;
+    background-color: rgb(var(--color-primary));
+    border-radius: 6px;
+    padding: 15px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.newBattleButton:hover {
+}
+
+.NavButton {
+    height: 100%;
+    border-radius: 6px;
+    padding: 15px 16px;
+    color: rgb(var(--color-grey-50));
+    font-size: .875rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    gap: 10px;
+
+    transition: .3s;
+}
+
+.NavButtonActive {
+    background-color: rgb(var(--color-background-50));
+    color: white
+}
+
+.NavButton:hover 
+{
+    background-color: rgb(var(--color-background-50));
+    color: white
+}
+
+.svgPlus 
+{
+    height: 12px;
+    width: 12px;
+}
+
+.NavButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+/* trigger (the part in your screenshot) */
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+
+  /* dark tinted pill + soft text (from your RGB channels) */
+  background-color: rgba(var(--btn-color), 0.12);
+  color: rgba(255, 255, 255, 0.85);
+
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.trigger:hover {
+  background-color: rgba(var(--btn-color), 0.18);
+}
+
+.trigger:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 3px rgba(var(--btn-color), 0.35);
+}
+
+.text {
+  font-size: 14.5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* chevron on the right */
+.chevron {
+  width: 18px;
+  height: 18px;
+  opacity: 0.55;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+/* dropdown menu (optional styling, tweak to your theme) */
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+
+  background: rgba(15, 23, 42, 0.96);      /* dark panel */
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+  max-height: 280px;
+  overflow: auto;
+  z-index: 20;
+}
+
+.item {
+  font-size: 14.5px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: background-color 140ms ease;
+}
+
+.item:hover {
+  background: rgba(var(--btn-color), 0.12);
+}

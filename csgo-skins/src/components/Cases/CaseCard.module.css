@@ -1,0 +1,90 @@
+:root {
+  --navy-900: #0b2341;
+  --navy-800: #0e2d52;
+  --outline: rgba(255, 255, 255, 0.06);
+  --title: #e8f1ff;
+  --pill-bg: #0c2b4e;
+  --pill-outline: rgba(255, 255, 255, 0.08);
+  --shadow: 0 12px 24px rgba(4, 21, 40, 0.45);
+}
+
+.card {
+  width: 100%;                 /* tweak for your grid */
+  background: var(--navy-900);
+  border-radius: 18px;
+  border: 1px solid var(--outline);
+  padding: 18px 16px 22px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(15, 59, 117, 0.45);
+  border-color: rgba(120, 180, 255, 0.2);
+}
+
+.title {
+  font-weight: 600;
+  color: var(--title);
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  margin-top: 4px;
+  text-shadow: 0 2px 8px rgba(120, 180, 255, 0.25);
+}
+
+/* image area */
+.imageWrap {
+  /* background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%); */
+  border-radius: 14px;
+  /* border: 1px solid var(--outline); */
+  padding: 18px 10px;
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+}
+
+/* bottom price notch area */
+.priceSlot {
+  position: relative;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-top: 6px;
+}
+
+/* price pill */
+.pricePill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: var(--pill-bg);
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  border: 1px solid var(--pill-outline);
+  box-shadow: 0 6px 14px rgba(13, 68, 124, 0.4);
+}
+
+/* fallback */
+.missing {
+  color: var(--muted);
+  font-size: 14px;
+}

@@ -1,0 +1,198 @@
+/* Colors */
+:root {
+  --bg: #061b34;          /* deep navy */
+  --bg-2: #082646;        /* slightly lighter */
+  --pill: #0b2b4c;        /* pill base */
+  --pill-strong: #0e3961; /* hover */
+  --text: white;        /* brand white-blue */
+  --active: #ffffff;      /* active link */
+  --accent: #45c17a;      /* balance green */
+}
+
+/* Container */
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 84px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+/* Left */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+}
+.brandLeft {
+  color: var(--text);
+  font-size: 28px;
+}
+.brandRight {
+  color: var(--text);
+  font-size: 28px;
+}
+.brandDot {
+  width: 18px;
+  height: 18px;
+  margin: 0 6px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 3px #0a2a4a inset, 0 0 8px rgba(0, 199, 255, 0.6);
+  background: radial-gradient(circle at 50% 45%, #4bd2ff 0%, #0bb0ff 60%, #0066cc 100%);
+}
+
+/* Socials (left) */
+.socialWrap {
+  display: flex;
+  gap: 8px;
+}
+.pillIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background .2s ease, transform .08s ease;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.pillIcon:hover { background: var(--pill-strong); transform: translateY(-1px); }
+.iconGlyph { color: #bcd1ee; font-size: 15px; line-height: 1; }
+
+/* Center nav links */
+.centerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+.centerLink {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color .15s ease;
+}
+.centerLink:hover { color: white; }
+.centerLinkActive {
+  color: var(--active);
+  position: relative;
+}
+.centerLinkActive::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -18px;
+  width: 72px;
+  height: 8px;
+  background: linear-gradient(180deg, #69b6ff 0%, #2f7cff 100%);
+  border-radius: 12px 12px 4px 4px;
+  filter: drop-shadow(0 6px 10px rgba(47,124,255,.45));
+}
+
+/* Right actions */
+.actionsWrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Pills */
+.pill {
+  height: 44px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: rgba(var(--color-green), .1);
+  color: #cfe2ff;
+  text-decoration: none;
+  transition: background .2s ease, transform .08s ease;
+}
+.pill:hover { background: var(--pill-strong); transform: translateY(-1px); }
+
+/* Round pill (token) */
+.pillRound {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--pill);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background .2s ease, transform .08s ease;
+}
+.pillRound:hover { background: var(--pill-strong); transform: translateY(-1px); }
+
+/* Balance pill details */
+.pillBalance {
+  padding-left: 10px;
+  padding-right: 6px;
+  gap: 10px;
+}
+.walletIcon 
+{ 
+  height: 35%;
+  color: rgb(var(--color-green));
+}
+.balanceText {
+  /* color: 61 217 131; */
+  color: rgb(var(--color-green));
+  font-weight: 600;
+  font-size: 14px;
+}
+.addBtn {
+  height: 28px;
+  width: 28px;
+  border-radius: 10px;
+  background: #1b5b3a;
+  color: #caffdf;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  transition: filter .15s ease;
+}
+.addBtn:hover { filter: brightness(1.05); }
+
+/* Keys / lock */
+.lockIcon { font-size: 14px; }
+.countText { font-weight: 800; }
+
+/* Token swirl + gear */
+.swirl { font-size: 18px; }
+.gearIcon { font-size: 14px; }
+
+
+.hexagon {
+  height: 24px; /* adjust to control the size  */
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+  background: rgb(var(--color-green));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgPlus 
+{
+  height: 50%;
+  color: var(--panel);
+}
